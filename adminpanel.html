@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="adminpanel.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Add QnA</h2>
+            <form id="addQnAForm">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="math">Math</option>
+                        <option value="science">Science</option>
+                        <!-- Add more subjects as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="class">Class:</label>
+                    <select id="class" name="class" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <!-- Add more classes as needed -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="answer">Answer:</label>
+                    <textarea id="answer" name="answer" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Add QnA</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>All QnA</h2>
+            <table id="qnaTable">
+                <thead>
+                    <tr>
+                        <th>QnA No.</th>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="adminpanel.js"></script>
+</body>
+</html>
